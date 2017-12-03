@@ -1,27 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+            <string>AmericanTypewriter-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="SayIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8G8-cP-QB6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rh0-c6-FVF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m92-42-ZU1" customClass="RoundedShadowView" customModule="SayIt" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="30" width="335" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SFB-71-rF5">
+                                                <rect key="frame" x="8" y="8" width="319" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="JhN-Vv-qYP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="319" height="32"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="18"/>
+                                                        <color key="textColor" red="0.62625688314437866" green="0.20073515176773071" blue="0.14302018284797668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Confidence" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I64-Tg-bOh">
+                                                        <rect key="frame" x="0.0" y="32" width="319" height="12"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="10"/>
+                                                        <color key="textColor" red="0.62625688310000005" green="0.20073515180000001" blue="0.14302018280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SFB-71-rF5" firstAttribute="top" secondItem="m92-42-ZU1" secondAttribute="top" constant="8" id="2S2-t4-3BB"/>
+                                            <constraint firstAttribute="height" constant="60" id="NE6-VU-Qfi"/>
+                                            <constraint firstAttribute="trailing" secondItem="SFB-71-rF5" secondAttribute="trailing" constant="8" id="j7v-x1-0yx"/>
+                                            <constraint firstItem="SFB-71-rF5" firstAttribute="leading" secondItem="m92-42-ZU1" secondAttribute="leading" constant="8" id="obB-b0-qHr"/>
+                                            <constraint firstAttribute="bottom" secondItem="SFB-71-rF5" secondAttribute="bottom" constant="8" id="zdJ-fY-v3S"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-Z5-cgX" customClass="RoundedShadowButton" customModule="SayIt" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="617" width="85" height="30"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="9ec-QV-15J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <state key="normal" title="Flash Off">
+                                            <color key="titleColor" red="0.77048004748774501" green="0.20114730136846404" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-js-Hm6" customClass="RoundedShadowImage" customModule="SayIt" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="519" width="75" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="c5Z-ym-4vi"/>
+                                            <constraint firstAttribute="height" constant="128" id="f1e-oa-vUJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hlY-js-Hm6" secondAttribute="trailing" constant="20" id="LlY-uF-gQC"/>
+                                    <constraint firstItem="m92-42-ZU1" firstAttribute="leading" secondItem="rh0-c6-FVF" secondAttribute="leading" constant="20" id="Qpq-TV-ZYQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="m92-42-ZU1" secondAttribute="trailing" constant="20" id="SdS-PB-AB0"/>
+                                    <constraint firstItem="m92-42-ZU1" firstAttribute="top" secondItem="rh0-c6-FVF" secondAttribute="top" constant="30" id="SoQ-35-lA6"/>
+                                    <constraint firstAttribute="bottom" secondItem="hlY-js-Hm6" secondAttribute="bottom" constant="20" id="ZfU-Td-nDn"/>
+                                    <constraint firstItem="zH0-Z5-cgX" firstAttribute="leading" secondItem="rh0-c6-FVF" secondAttribute="leading" constant="20" id="dFR-O4-sPw"/>
+                                    <constraint firstAttribute="bottom" secondItem="zH0-Z5-cgX" secondAttribute="bottom" constant="20" id="pB1-8F-jSY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rh0-c6-FVF" firstAttribute="top" secondItem="8G8-cP-QB6" secondAttribute="top" id="eBy-aD-fId"/>
+                            <constraint firstItem="rh0-c6-FVF" firstAttribute="trailing" secondItem="Q58-8L-WHc" secondAttribute="trailing" id="gBY-om-XXx"/>
+                            <constraint firstItem="rh0-c6-FVF" firstAttribute="leading" secondItem="Q58-8L-WHc" secondAttribute="leading" id="mEG-5J-Yqz"/>
+                            <constraint firstItem="rh0-c6-FVF" firstAttribute="bottom" secondItem="Q58-8L-WHc" secondAttribute="bottom" id="mRt-vJ-h3f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q58-8L-WHc"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="camView" destination="rh0-c6-FVF" id="CEH-0V-klh"/>
+                        <outlet property="captureView" destination="hlY-js-Hm6" id="uG1-d7-fjf"/>
+                        <outlet property="confidenceLabel" destination="I64-Tg-bOh" id="Z80-vb-gT8"/>
+                        <outlet property="flashButton" destination="zH0-Z5-cgX" id="Jso-Am-pGU"/>
+                        <outlet property="idLabel" destination="JhN-Vv-qYP" id="ynT-nX-DWM"/>
+                        <outlet property="upperLabel" destination="m92-42-ZU1" id="Jht-dW-xnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="39.200000000000003" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
