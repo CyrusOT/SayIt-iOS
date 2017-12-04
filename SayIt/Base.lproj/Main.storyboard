@@ -78,13 +78,18 @@
                                     <constraint firstAttribute="height" constant="60" id="nM1-sy-7hh"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gfI-Ac-oQq">
+                                <rect key="frame" x="307" y="573" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rh0-c6-FVF" firstAttribute="bottom" secondItem="Q58-8L-WHc" secondAttribute="bottom" id="Dja-CC-pZ6"/>
                             <constraint firstItem="rh0-c6-FVF" firstAttribute="leading" secondItem="Q58-8L-WHc" secondAttribute="leading" id="JgT-Xj-cde"/>
+                            <constraint firstItem="gfI-Ac-oQq" firstAttribute="centerY" secondItem="hlY-js-Hm6" secondAttribute="centerY" id="LTw-6f-SHu"/>
                             <constraint firstItem="Q58-8L-WHc" firstAttribute="bottom" secondItem="hlY-js-Hm6" secondAttribute="bottom" constant="20" id="Lza-Gp-jbn"/>
                             <constraint firstItem="Q58-8L-WHc" firstAttribute="bottom" secondItem="zH0-Z5-cgX" secondAttribute="bottom" constant="20" id="Og6-T7-KCd"/>
+                            <constraint firstItem="gfI-Ac-oQq" firstAttribute="centerX" secondItem="hlY-js-Hm6" secondAttribute="centerX" id="Os3-Z9-5d8"/>
                             <constraint firstItem="Q58-8L-WHc" firstAttribute="trailing" secondItem="m92-42-ZU1" secondAttribute="trailing" constant="20" id="SbH-d5-zMQ"/>
                             <constraint firstItem="m92-42-ZU1" firstAttribute="leading" secondItem="Q58-8L-WHc" secondAttribute="leading" constant="20" id="SpO-KH-jJ3"/>
                             <constraint firstItem="rh0-c6-FVF" firstAttribute="trailing" secondItem="Q58-8L-WHc" secondAttribute="trailing" id="XdL-SK-hEU"/>
@@ -105,6 +110,7 @@
                         <outlet property="confidenceLabel" destination="I64-Tg-bOh" id="Z80-vb-gT8"/>
                         <outlet property="flashButton" destination="zH0-Z5-cgX" id="Jso-Am-pGU"/>
                         <outlet property="idLabel" destination="JhN-Vv-qYP" id="ynT-nX-DWM"/>
+                        <outlet property="spinner" destination="gfI-Ac-oQq" id="K17-7m-jfu"/>
                         <outlet property="upperLabel" destination="m92-42-ZU1" id="Jht-dW-xnM"/>
                     </connections>
                 </viewController>

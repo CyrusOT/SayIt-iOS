@@ -36,15 +36,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var flashButton: RoundedShadowButton!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var confidenceLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        speechSynthseizer.delegate = self
+        spinner.isHidden = true
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer.frame = camView.bounds  //To set the previewLayer as the main view (cam).
-        speechSynthseizer.delegate = self
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +88,10 @@ class ViewController: UIViewController {
     }
     
     @objc func didTapCamView() {
+        self.camView.isUserInteractionEnabled = false // Disable taking multiple pictures
+        self.spinner.isHidden = false
+        self.spinner.startAnimating()
+        
         let settings = AVCapturePhotoSettings()
         
         
@@ -105,8 +115,9 @@ class ViewController: UIViewController {
             if classification.confidence < 0.5 {   // don't show result < 50%
                 let unknownObjMessage = "I'm not sure what this is, show me again, will you?"
                 self.idLabel.text = unknownObjMessage
-                synthesizeSpeech(fromString: unknownObjMessage)
                 self.confidenceLabel.text = ""
+                
+                synthesizeSpeech(fromString: unknownObjMessage)
                 break
             } else {
                 let identification = classification.identifier
@@ -117,8 +128,6 @@ class ViewController: UIViewController {
                 self.confidenceLabel.text = String(confidence) // confidence
                 
                 synthesizeSpeech(fromString: knownObjMessage)
-
-                
                 break
             }
         }
@@ -173,7 +182,11 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
 
 extension ViewController: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        // to finish utterance
+        self.camView.isUserInteractionEnabled = true // enables taking a picture again
+        self.spinner.isHidden = true
+        self.spinner.stopAnimating()
+        
+        
     }
 }
 
