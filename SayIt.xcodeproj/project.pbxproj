@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A357F4423398F8500862835 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A357F4323398F8500862835 /* VGG16.mlmodel */; };
+		3AD9016623399122000DA719 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9016523399122000DA719 /* Resnet50.mlmodel */; };
+		63E20F7A21E4604D00C6D903 /* Oxford102.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */; };
 		6E1EDDC61FD3A6240062DBBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */; };
 		6E1EDDCD1FD3A6240062DBBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EDDCB1FD3A6240062DBBE /* Main.storyboard */; };
 		6E1EDDCF1FD3A6240062DBBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EDDCE1FD3A6240062DBBE /* Assets.xcassets */; };
@@ -15,11 +18,12 @@
 		6E1EDE001FD3C8970062DBBE /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EDDFF1FD3C8970062DBBE /* RoundedShadowView.swift */; };
 		6E1EDE021FD3D2620062DBBE /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EDE011FD3D2620062DBBE /* RoundedShadowButton.swift */; };
 		6E1EDE041FD3D2CB0062DBBE /* RoundedShadowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EDE031FD3D2CB0062DBBE /* RoundedShadowImage.swift */; };
-		6E2594461FD89CC200079314 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E2594451FD89CC200079314 /* VGG16.mlmodel */; };
-		6E3D7C231FD502FA0072AABA /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D7C221FD502FA0072AABA /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A357F4323398F8500862835 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
+		3AD9016523399122000DA719 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Oxford102.mlmodel; sourceTree = "<group>"; };
 		6E1EDDC21FD3A6240062DBBE /* SayIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E1EDDCC1FD3A6240062DBBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,8 +34,6 @@
 		6E1EDDFF1FD3C8970062DBBE /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		6E1EDE011FD3D2620062DBBE /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		6E1EDE031FD3D2CB0062DBBE /* RoundedShadowImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowImage.swift; sourceTree = "<group>"; };
-		6E2594451FD89CC200079314 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VGG16.mlmodel; path = ../../../../../../../../../Downloads/VGG16.mlmodel; sourceTree = "<group>"; };
-		6E3D7C221FD502FA0072AABA /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,8 @@
 				6E1EDDDB1FD3BC3F0062DBBE /* View */,
 				6E1EDDDA1FD3BC270062DBBE /* Controller */,
 				6E1EDDD91FD3BBFA0062DBBE /* Resources */,
-				6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */,
 				6E1EDDCB1FD3A6240062DBBE /* Main.storyboard */,
+				6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */,
 				6E1EDDCE1FD3A6240062DBBE /* Assets.xcassets */,
 				6E1EDDD01FD3A6240062DBBE /* LaunchScreen.storyboard */,
 				6E1EDDD31FD3A6240062DBBE /* Info.plist */,
@@ -79,8 +81,9 @@
 		6E1EDDD91FD3BBFA0062DBBE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6E2594451FD89CC200079314 /* VGG16.mlmodel */,
-				6E3D7C221FD502FA0072AABA /* SqueezeNet.mlmodel */,
+				3AD9016523399122000DA719 /* Resnet50.mlmodel */,
+				3A357F4323398F8500862835 /* VGG16.mlmodel */,
+				63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,12 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E20F7A21E4604D00C6D903 /* Oxford102.mlmodel in Sources */,
+				3A357F4423398F8500862835 /* VGG16.mlmodel in Sources */,
 				6E1EDDFE1FD3C6530062DBBE /* ViewController.swift in Sources */,
-				6E2594461FD89CC200079314 /* VGG16.mlmodel in Sources */,
 				6E1EDDC61FD3A6240062DBBE /* AppDelegate.swift in Sources */,
 				6E1EDE001FD3C8970062DBBE /* RoundedShadowView.swift in Sources */,
-				6E3D7C231FD502FA0072AABA /* SqueezeNet.mlmodel in Sources */,
 				6E1EDE021FD3D2620062DBBE /* RoundedShadowButton.swift in Sources */,
+				3AD9016623399122000DA719 /* Resnet50.mlmodel in Sources */,
 				6E1EDE041FD3D2CB0062DBBE /* RoundedShadowImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
