@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A357F4423398F8500862835 /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A357F4323398F8500862835 /* VGG16.mlmodel */; };
-		3AD9016623399122000DA719 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9016523399122000DA719 /* Resnet50.mlmodel */; };
-		63E20F7A21E4604D00C6D903 /* Oxford102.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */; };
+		3AD974F524BBD78C001CE94B /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3AD974F424BBD78C001CE94B /* MobileNet.mlmodel */; };
 		6E1EDDC61FD3A6240062DBBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */; };
 		6E1EDDCD1FD3A6240062DBBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EDDCB1FD3A6240062DBBE /* Main.storyboard */; };
 		6E1EDDCF1FD3A6240062DBBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EDDCE1FD3A6240062DBBE /* Assets.xcassets */; };
@@ -21,9 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A357F4323398F8500862835 /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
-		3AD9016523399122000DA719 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
-		63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Oxford102.mlmodel; sourceTree = "<group>"; };
+		3AD974F424BBD78C001CE94B /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		6E1EDDC21FD3A6240062DBBE /* SayIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1EDDC51FD3A6240062DBBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E1EDDCC1FD3A6240062DBBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,9 +77,7 @@
 		6E1EDDD91FD3BBFA0062DBBE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3AD9016523399122000DA719 /* Resnet50.mlmodel */,
-				3A357F4323398F8500862835 /* VGG16.mlmodel */,
-				63E20F7921E4604D00C6D903 /* Oxford102.mlmodel */,
+				3AD974F424BBD78C001CE94B /* MobileNet.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -133,11 +127,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Ahmed AlOtaibi";
 				TargetAttributes = {
 					6E1EDDC11FD3A6240062DBBE = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1150;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -178,13 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63E20F7A21E4604D00C6D903 /* Oxford102.mlmodel in Sources */,
-				3A357F4423398F8500862835 /* VGG16.mlmodel in Sources */,
 				6E1EDDFE1FD3C6530062DBBE /* ViewController.swift in Sources */,
 				6E1EDDC61FD3A6240062DBBE /* AppDelegate.swift in Sources */,
+				3AD974F524BBD78C001CE94B /* MobileNet.mlmodel in Sources */,
 				6E1EDE001FD3C8970062DBBE /* RoundedShadowView.swift in Sources */,
 				6E1EDE021FD3D2620062DBBE /* RoundedShadowButton.swift in Sources */,
-				3AD9016623399122000DA719 /* Resnet50.mlmodel in Sources */,
 				6E1EDE041FD3D2CB0062DBBE /* RoundedShadowImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +218,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -232,6 +226,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -259,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +277,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -289,6 +285,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -310,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -325,10 +322,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MEPN664T;
 				INFOPLIST_FILE = SayIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedot.SayIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -340,10 +339,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6MEPN664T;
 				INFOPLIST_FILE = SayIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmedot.SayIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

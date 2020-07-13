@@ -113,7 +113,7 @@ class ViewController: UIViewController {
         // analyzing the data
         guard let result = request.results as? [VNClassificationObservation] else { return }
         for classification in result {
-            if classification.confidence < 0.2 {   // don't show result < 20%
+            if classification.confidence < 0.7 {   // don't show result < 70%
                 let unknownObjMessage = "I'm not sure what this is"
                 self.idLabel.text = unknownObjMessage
                 self.confidenceLabel.text = ""
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // Passing a string to the AVSpeechUtterance and Speak it
+    // Passing a string to the AVSpeechUtterance and Say it
     func synthesizeSpeech(fromString string: String) {
         let speechUtterance = AVSpeechUtterance(string: string)
         speechSynthseizer.speak(speechUtterance)
@@ -166,7 +166,7 @@ extension ViewController: AVCapturePhotoCaptureDelegate {
             photoData = photo.fileDataRepresentation() // returns Data (data of a photo)
 
             do {
-                let model = try VNCoreMLModel(for: Resnet50().model) // assigning model to SOxford102.mlmodle
+                let model = try VNCoreMLModel(for: MobileNet().model) // assigning model to MobileNet.mlmodle
                 let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod) // request from model(The brain of the model)
                 let handler = VNImageRequestHandler(data: photoData!) // connet the picture's data with the model's brain.
                 try handler.perform([request])
